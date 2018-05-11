@@ -18,7 +18,7 @@
 # paths to disable it.
 # -----------------------------------
 
-placeholderapi: false
+placeholderapi: true
 use-mysql: false
 enabled: true
 disabled-msg: '&cBlocks aren''t enabled yet! If you are a player, refer to a Server
@@ -66,25 +66,18 @@ blocks:
 - -715;113;-144;world
 find-block-commands:
 - particle mobSpell %locX% %locY% %locZ% 0.25 0.25 0.25 1 10
-- rawmsg %player% true &a&lBlock&2&lQUEST
-- rawmsg %player% false &a
-- rawmsg %player% true &fYou found a block!
-- rawmsg %player% true &f%blocksLeft% left.
-- give %player% diamond 1
+- msg %player% &bYou have found an easter egg!
+- msg %player% &bYou have been awarded 1 rare crate!
+- msg %player% &bYou have &f%blockquest_blocksleft%&b easter eggs left to find!
+- pcrate give %player% rare 1
 all-blocks-found-commands:
-- rawmsg %player% true &a&lBlock&2&lQUEST
-- rawmsg %player% false &a
-- rawmsg %player% true &fYou found &lALL &fblocks!
-- rawmsg %player% true &fNice!
-- give %player% diamond_block 1
+- broadcast &d%player% &bhas &efound &aall &6the &ceaster &feggs!
+- msg %player% &bYou have been awarded 2 pure crates!
+- pcrate give %player% pure 2
 already-found-commands:
-- rawmsg %player% true &a&lBlock&2&lQUEST
-- rawmsg %player% false &a
-- rawmsg %player% true &fYou already found this block!
+- msg %player% &bYou have already found this easter egg
 already-found-all-blocks:
-- rawmsg %player% true &a&lBlock&2&lQUEST
-- rawmsg %player% false &a
-- rawmsg %player% true &fYou already found all blocks!
+- msg %player% &bYou have already found every easter egg
 find-effect:
   enabled: true
   invisible: true
@@ -108,18 +101,18 @@ find-effect:
     - say The find effect disappeared at %locX% %locY% %locZ%!
 particles:
   loop: 20
-  enabled: false
+  enabled: true
   found:
     dx: 0.05
     dy: 0.05
     dz: 0.05
     speed: 0.1
     quantity: 20
-    type: DISABLED
+    type: FLAME
   notfound:
     dx: 0.05
     dy: 0.05
     dz: 0.05
     speed: 0.1
     quantity: 35
-    type: FLAME
+    type: DISABLED

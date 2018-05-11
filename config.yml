@@ -68,7 +68,7 @@ find-block-commands:
 - particle mobSpell %locX% %locY% %locZ% 0.25 0.25 0.25 1 10
 - msg %player% &bYou have found an easter egg!
 - msg %player% &bYou have been awarded 1 rare crate!
-- msg %player% &bYou have &f%blockquest_blocksleft%&b easter eggs left to find!
+- msg %player% &bYou have &f%blocksleft%&b easter eggs left to find!
 - pcrate give %player% rare 1
 all-blocks-found-commands:
 - broadcast &d%player% &bhas &efound &aall &6the &ceaster &feggs!

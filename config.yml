@@ -74,6 +74,7 @@ all-blocks-found-commands:
 - broadcast &d%player% &bhas &efound &aall &6the &ceaster &feggs!
 - msg %player% &bYou have been awarded 2 pure crates!
 - pcrate give %player% pure 2
+- minecraft:give %player% minecraft:potion 1 0 {CustomPotionEffects:[{Id:3,Amplifier:4,Duration:12000}],CustomPotionColor:16051518,display:{Name:"Ultimate Potion Of Haste",Lore:["Use an Eff 5 iron axe","or an Eff 6 diamond pick","for instant mining"]}}
 already-found-commands:
 - msg %player% &bYou have already found this easter egg
 already-found-all-blocks:
